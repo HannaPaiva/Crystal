@@ -1,0 +1,15 @@
+@function font-size($key) {
+  @return map-get($font-sizes, $key);
+}
+
+@function font-weight($key) {
+  @return map-get($font-weights, $key);
+}
+
+@function lighten($color, $amount: 20%) {
+  @return mix(white, $color, $amount);
+}
+
+@function darken($color, $amount: 20%) {
+  @return mix(black, $color, $amount);
+}

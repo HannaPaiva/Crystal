@@ -1,0 +1,84 @@
+@import "./variables.scss";
+@import "./functions.scss";
+
+body {
+  font-family: $default-font;
+  color: $text-color;
+  font-size: font-size("body1");
+  font-weight: font-weight("regular");
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: font-size("h1");
+  font-weight: font-weight("regular");
+}
+
+h2 {
+  font-size: font-size("h2");
+  font-weight: font-weight("regular");
+}
+
+h3 {
+  font-size: font-size("h3");
+  font-weight: font-weight("medium");
+}
+
+h4 {
+  font-size: font-size("h4");
+  font-weight: font-weight("medium");
+}
+
+h5 {
+  font-size: font-size("h5");
+  font-weight: font-weight("medium");
+
+}
+
+h6 {
+  font-size: font-size("h6");
+  font-weight: font-weight("medium");
+
+}
+
+p {
+  font-size: 16px; // Default font size for smaller devices
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 18px; // Larger font size for tablets and up
+  }
+}
+
+@media (min-width: 1024px) {
+  p {
+    font-size: 20px; // Even larger font size for desktops
+  }
+}
+
+
+.primary-input .MuiOutlinedInput-root:not(.Mui-focused):hover .MuiOutlinedInput-notchedOutline {
+  border-color: $primary-color;
+
+}
+
+.primary-input .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: $primary-color;
+}
+
+.primary-input .MuiInputLabel-root {
+  color: lighten($text-color, 10%);
+}
+
+// Links
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  color: darken($primary-color);
+}

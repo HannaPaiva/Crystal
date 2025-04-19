@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+@import '../../styles/functions.scss';
+
+.card {
+  &_heading,
+  &_text {
+    margin: 0;
+  }
+  &_button{
+    padding-right: 10px;
+  }
+  &_description{
+    font-size: font-size("body2");
+  }
+  &_date{
+    color: $text-disabled;
+    font-size: font-size("body2");
+  }
+}
