@@ -41,7 +41,7 @@ const Header: React.FC = () => {
   const handleScrollTo = (elementId: string) => {
     // Close mobile menu if open
     setIsMobileMenuOpen(false);
-    
+
     // If we're on homepage, scroll to section
     if (isHomePage) {
       const element = document.getElementById(elementId);
@@ -64,16 +64,19 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
           ? 'bg-white shadow-sm py-3'
           : 'bg-transparent py-4'
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-playfair text-spa-secondary">
-            Crystal
+            <img
+              src="logos/logo-name-01.png"
+              className="h-10 w-53 "
+            />
+
           </Link>
 
           {/* Desktop Navigation */}

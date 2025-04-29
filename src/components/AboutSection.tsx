@@ -21,9 +21,12 @@ const AboutSection: React.FC = () => {
             isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
             <img 
-              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80" 
+              src="./salao/massagem-04.jpg" 
               alt="Salon Interior" 
               className="w-full h-full object-cover"
+              style={{
+                height: "535px"
+              }}
             />
           </div>
           <div>

@@ -93,28 +93,28 @@ const ContactSection: React.FC = () => {
                   <Phone className="text-spa-teal mr-4" />
                   <div>
                     <p className="font-medium">Telefone</p>
-                    <p className="text-gray-600">(11) 99999-9999</p>
+                    <p className="text-gray-600">(+351) 964 894 455</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <MessageSquare className="text-spa-teal mr-4" />
                   <div>
                     <p className="font-medium">WhatsApp</p>
-                    <p className="text-gray-600">(11) 99999-9999</p>
+                    <p className="text-gray-600">(+351) 964 894 455</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Instagram className="text-spa-teal mr-4" />
                   <div>
                     <p className="font-medium">Instagram</p>
-                    <p className="text-gray-600">@belezaemfocospa</p>
+                    <p className="text-gray-600">@crystal.almancil</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="text-spa-teal mr-4" />
                   <div>
                     <p className="font-medium">Endereço</p>
-                    <p className="text-gray-600">Av. Paulista, 1000, São Paulo - SP</p>
+                    <p className="text-gray-600">R. Manuel dos Santos Vaquinhas 53 loja A, 8135-154 Almancil</p>
                   </div>
                 </div>
               </div>
@@ -124,7 +124,7 @@ const ContactSection: React.FC = () => {
               isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.098391933635!2d-46.65604278826406!3d-23.56413496752757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1691167058425!5m2!1spt-BR!2sbr" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.780954936401!2d-8.033861600000002!3d37.0865236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ab3c742c49aa3%3A0xab887dec0b951ca8!2sCrystal%20Beleza%20e%20Bem%20Estar!5e0!3m2!1sen!2spt!4v1745591871391!5m2!1sen!2spt" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -132,6 +132,7 @@ const ContactSection: React.FC = () => {
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
+
             </div>
           </div>
         </div>
