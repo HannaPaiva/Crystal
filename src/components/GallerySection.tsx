@@ -10,89 +10,137 @@ const GallerySection: React.FC = () => {
   const images = [
     {
       id: 1,
-      src: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80',
-      category: 'hair',
+      src: '/salao/salao-00.jpg',
+      category: 'salon',
+      alt: 'Hair styling'
+    },
+
+    {
+      id: 2,
+      src: '/salao/salao-01.jpg',
+      category: 'salon',
       alt: 'Hair styling'
     },
     {
-      id: 2,
-      src: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80',
-      category: 'nails',
-      alt: 'Nail art'
-    },
-    {
       id: 3,
-      src: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-      category: 'massage',
-      alt: 'Massage treatment'
+      src: '/salao/salao-09.jpg',
+      category: 'salon',
+      alt: 'Eyelash and makeup'
     },
     {
       id: 4,
-      src: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-      category: 'eyelashes',
-      alt: 'Eyelash extension'
+      src: '/salao/cilios-01.jpeg',
+      category: 'salon',
+      alt: 'Nail art'
     },
+
     {
       id: 5,
-      src: 'https://images.unsplash.com/photo-1595867818082-083862f3d630?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80',
+      src: '/salao/cabelo-01.png',
       category: 'hair',
       alt: 'Hair coloring'
     },
     {
       id: 6,
-      src: 'https://images.unsplash.com/photo-1607779097040-813a51f0e7a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-      category: 'nails',
+      src: '/salao/cabelo-02.png',
+      category: 'hair',
       alt: 'Manicure process'
     },
     {
       id: 7,
-      src: 'https://images.unsplash.com/photo-1630322726644-a5f1c336a0d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-      category: 'massage',
+      src: '/salao/cabelo-03.png',
+      category: 'hair',
       alt: 'Spa massage'
     },
     {
       id: 8,
-      src: 'https://images.unsplash.com/photo-1577037834645-4dd35db32662?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80',
-      category: 'eyelashes',
+      src: '/salao/cabelo-04.png',
+      category: 'hair',
       alt: 'Eyelash and makeup'
+    },
+    {
+      id: 9,
+      src: '/salao/salao-04.jpg',
+      category: 'massage',
+      alt: 'Massage treatment'
+    },
+    {
+      id: 10,
+      src: '/salao/salao-05.jpg',
+      category: 'massage',
+      alt: 'Eyelash extension'
+    },
+    {
+      id: 11,
+      src: '/salao/massagem-04.png',
+      category: 'massage',
+      alt: 'Massage treatment'
+    },
+    {
+      id: 12,
+      src: '/salao/massagem-05.png',
+      category: 'massage',
+      alt: 'Eyelash extension'
+    },
+    {
+      id: 13,
+      src: '/salao/unha-01.png',
+      category: 'nails',
+      alt: 'Eyelash extension'
+    },
+    {
+      id: 13,
+      src: '/salao/unha-02.png',
+      category: 'nails',
+      alt: 'Eyelash extension'
+    },
+    {
+      id: 13,
+      src: '/salao/unha-03.png',
+      category: 'nails',
+      alt: 'Eyelash extension'
+    },
+    {
+      id: 13,
+      src: '/salao/unha-04.png',
+      category: 'nails',
+      alt: 'Eyelash extension'
     },
   ];
 
   const filters = [
     { id: 'all', name: 'Todos' },
+    { id: 'salon', name: 'Salão' },
     { id: 'hair', name: 'Cabelo' },
     { id: 'nails', name: 'Unhas' },
     { id: 'massage', name: 'Massagem' },
     { id: 'eyelashes', name: 'Cílios' },
   ];
 
-  const filteredImages = activeFilter === 'all' 
-    ? images 
+  const filteredImages = activeFilter === 'all'
+    ? images
     : images.filter(image => image.category === activeFilter);
 
   return (
     <section id="gallery" className="py-20 bg-white" ref={ref}>
       <div className="container mx-auto px-4">
-        <div className={`text-center mb-16 transition-all duration-700 ${
-          isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
+        <div className={`text-center mb-16 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
           <h2 className="section-title">Galeria</h2>
           <p className="section-subtitle max-w-3xl mx-auto">
             Veja o que fazemos com carinho.
           </p>
         </div>
 
-        <div className={`flex flex-wrap justify-center gap-4 mb-12 transition-all duration-700 delay-200 ${
-          isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
+        <div className={`flex flex-wrap justify-center gap-4 mb-12 transition-all duration-700 delay-200 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
           {filters.map(filter => (
             <button
               key={filter.id}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
-                activeFilter === filter.id
-                  ? 'bg-spa-teal text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-              }`}
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${activeFilter === filter.id
+                ? 'bg-spa-teal text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
               onClick={() => setActiveFilter(filter.id)}
             >
               {filter.name}
@@ -102,17 +150,16 @@ const GallerySection: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {filteredImages.map((image, index) => (
-            <div 
-              key={image.id} 
-              className={`overflow-hidden rounded-lg shadow-md cursor-pointer transition-all duration-500 hover:scale-105 ${
-                isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
+            <div
+              key={image.id}
+              className={`overflow-hidden rounded-lg shadow-md cursor-pointer transition-all duration-500 hover:scale-105 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onClick={() => setActiveImage(image.src)}
             >
-              <img 
-                src={image.src} 
-                alt={image.alt} 
+              <img
+                src={image.src}
+                alt={image.alt}
                 className="w-full h-64 object-cover"
               />
             </div>
@@ -121,17 +168,17 @@ const GallerySection: React.FC = () => {
       </div>
 
       {activeImage && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
           onClick={() => setActiveImage(null)}
         >
           <div className="max-w-4xl max-h-full">
-            <img 
-              src={activeImage} 
-              alt="Gallery full view" 
+            <img
+              src={activeImage}
+              alt="Gallery full view"
               className="max-w-full max-h-[80vh] object-contain"
             />
-            <button 
+            <button
               className="absolute top-4 right-4 text-white bg-spa-teal rounded-full p-2"
               onClick={() => setActiveImage(null)}
             >

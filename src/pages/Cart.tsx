@@ -30,7 +30,7 @@ const Cart = () => {
             </Button>
           </div>
         </main>
-        <Footer />
+  
       </PageLayout>
     );
   }
@@ -152,7 +152,6 @@ const Cart = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </PageLayout>
   );
 };

@@ -84,9 +84,9 @@ const ServicesSection: React.FC = () => {
                 {service.description}
               </p>
               <div className="text-center">
-                <button className="font-montserrat text-spa-secondary font-medium hover:text-spa-medium transition-colors">
+                {/* <button className="font-montserrat text-spa-secondary font-medium hover:text-spa-medium transition-colors">
                   Saiba mais
-                </button>
+                </button> */}
               </div>
             </div>
           ))}

@@ -15,22 +15,22 @@ const products = [
     name: "Shampoo Revitalizante",
     price: 59.90,
     description: "Shampoo profissional para cabelos danificados",
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9"
+    image: ""
   },
   {
     id: 2,
     name: "Máscara Hidratante",
     price: 89.90,
     description: "Máscara de tratamento intensivo",
-    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901"
+    image: ""
   },
   {
     id: 3,
     name: "Óleo Capilar",
     price: 49.90,
     description: "Óleo para finalização e brilho",
-    image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07"
-  }
+    image: ""
+  },
 ];
 
 const Products = () => {
@@ -103,7 +103,7 @@ const Products = () => {
           ))}
         </div>
       </main>
-      <Footer />
+    
       <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </PageLayout>
   );

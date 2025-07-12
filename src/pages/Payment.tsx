@@ -243,7 +243,7 @@ const Payment = () => {
           </div>
         </div>
       </main>
-      <Footer />
+     
     </PageLayout>
   );
 };
