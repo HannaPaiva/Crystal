@@ -7,7 +7,7 @@ const TeamSection: React.FC = () => {
   const team = [
     {
       id: 1,
-      name: 'Cristiane',
+      name: 'Cristiane dos Santos',
       position: 'Especialista em massagem',
       image: '/staff/crys-02.jpg',
       description: 'Com mais de 10 anos de experiência, Cristiane promete todo tipo de relaxamento muscular e corporal.',
@@ -26,7 +26,7 @@ const TeamSection: React.FC = () => {
 
     {
       id: 5,
-      name: 'Nayara',
+      name: 'Nayara Ferreira',
       position: 'Lash designer',
       image: '/staff/nay-01.jpeg',
       description: 'Especializada em cílios para levantar o seu olhar com mais de 7 anos de experiência',

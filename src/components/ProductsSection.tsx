@@ -1,35 +1,66 @@
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ShoppingCart } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import { useCart } from '../hooks/useCart';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
-import CartDrawer from '../components/CartDrawer';
-import PageLayout from '../components/PageLayout';
-import { products } from '../data/products';
 
-const Products = () => {
+const products = [
+  {
+    id: 1,
+    name: "Shampoo Revitalizante",
+    price: 59.90,
+    description: "Shampoo profissional para cabelos danificados",
+    image: "./products/products-01.jpg",
+    details: [
+      "Volume: 300ml",
+      "Para cabelos danificados",
+      "Uso profissional",
+      "Sem parabenos",
+      "Vegano"
+    ]
+  },
+  {
+    id: 2,
+    name: "Máscara Hidratante",
+    price: 89.90,
+    description: "Máscara de tratamento intensivo",
+    image: "./products/products-02.jpg",
+    details: [
+      "Volume: 250g",
+      "Para todos os tipos de cabelo",
+      "Hidratação profunda",
+      "Sem sulfatos",
+      "Fragrância suave"
+    ]
+  },
+  {
+    id: 3,
+    name: "Óleo Capilar",
+    price: 49.90,
+    description: "Óleo para finalização e brilho",
+    image: "./products/products-03.jpg",
+    details: [
+      "Volume: 100ml",
+      "Livre de silicone",
+      "Anti-frizz",
+      "Com filtro UV",
+      "Para todos os tipos de cabelo"
+    ]
+  },
+];
+
+const ProductsSection = () => {
   const navigate = useNavigate();
-  const { addToCart, itemCount } = useCart();
-  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const handleViewProduct = (product: typeof products[0]) => {
     navigate(`/products/${product.id}`, { state: product });
   };
 
   return (
-    <PageLayout>
+    <div>
       <main className="container mx-auto px-4 py-8">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold text-spa-teal">Nossos Produtos</h1>
-          <Button
-            variant="outline"
-            className="flex items-center gap-2 border-spa-teal text-spa-teal hover:bg-spa-teal/10"
-            onClick={() => setIsCartOpen(true)}
-          >
-            <ShoppingCart />
-            <span>Carrinho ({itemCount})</span>
-          </Button>
+        <div className="flex justify-center items-center mb-8">
+          <h1 className="text-4xl font-bold text-spa-teal text-center">
+            Nossos Produtos
+          </h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -59,16 +90,10 @@ const Products = () => {
                   € {product.price.toFixed(2)}
                 </p>
               </CardContent>
-              <CardFooter className="flex gap-2">
-                <Button
-                  className="flex-1 bg-spa-teal text-white hover:bg-spa-teal/90"
-                  onClick={() => addToCart(product)}
-                >
-                  Adicionar ao Carrinho
-                </Button>
+              <CardFooter className="flex justify-end">
                 <Button
                   variant="outline"
-                  className="flex-shrink-0 border-spa-teal text-spa-teal hover:bg-spa-teal/10"
+                  className="border-spa-teal text-spa-teal hover:bg-spa-teal/10"
                   onClick={() => handleViewProduct(product)}
                 >
                   Ver Detalhes
@@ -78,10 +103,8 @@ const Products = () => {
           ))}
         </div>
       </main>
-
-      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
-    </PageLayout>
+    </div>
   );
 };
 
-export default Products;
+export default ProductsSection;
