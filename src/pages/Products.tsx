@@ -41,7 +41,7 @@ const Products = () => {
               <CardHeader className="pb-0">
                 <div className="w-full h-[500px] overflow-hidden rounded-t-lg mb-4 flex items-center justify-center">
                   <img
-                    src={product.image}
+                    src={product.images[0]} // Usando a primeira imagem do array
                     alt={product.name}
                     className="h-full w-auto object-contain"
                   />

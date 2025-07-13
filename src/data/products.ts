@@ -1,12 +1,14 @@
-// src/data/products.ts
-
 export const products = [
   {
     id: 1,
     name: "Shampoo Revitalizante",
     price: 59.90,
-    description: "Shampoo profissional para cabelos danificados",
-    image: "./products/products-01.jpg",
+    description: "Shampoo profissional para cabelos danificados.",
+    images: [
+      "/products/products-01.jpg",
+      "/products/kit-03.jpg",
+      "/products/products-01.jpg"
+    ],
     details: [
       "Volume: 300ml",
       "Para cabelos danificados",
@@ -19,8 +21,12 @@ export const products = [
     id: 2,
     name: "Máscara Hidratante",
     price: 89.90,
-    description: "Máscara de tratamento intensivo",
-    image: "./products/products-02.jpg",
+    description: "Máscara de tratamento intensivo para todos os tipos de cabelo.",
+    images: [
+      "/products/products-02.jpg",
+      "/products/products-02-open.jpg",
+      "/products/products-02-texture.jpg"
+    ],
     details: [
       "Volume: 250g",
       "Para todos os tipos de cabelo",
@@ -33,8 +39,12 @@ export const products = [
     id: 3,
     name: "Óleo Capilar",
     price: 49.90,
-    description: "Óleo para finalização e brilho",
-    image: "./products/products-03.jpg",
+    description: "Óleo para finalização e brilho intenso.",
+    images: [
+      "/products/products-03.jpg",
+      "/products/products-03-drop.jpg",
+      "/products/products-03-side.jpg"
+    ],
     details: [
       "Volume: 100ml",
       "Livre de silicone",
@@ -42,5 +52,5 @@ export const products = [
       "Com filtro UV",
       "Para todos os tipos de cabelo"
     ]
-  },
+  }
 ];

@@ -1,15 +1,8 @@
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 import { toast } from 'sonner';
+import type { Product } from '../models/product.model';
 
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  image: string;
-  quantity?: number;
-}
 
 interface CartItem extends Product {
   quantity: number;

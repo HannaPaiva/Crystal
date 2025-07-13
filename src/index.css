@@ -1,7 +1,9 @@
-
+@import 'keen-slider/keen-slider.min.css';
+@import 'react-medium-image-zoom/dist/styles.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
   :root {
